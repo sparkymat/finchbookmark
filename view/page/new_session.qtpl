@@ -1,7 +1,11 @@
 {% import "github.com/sparkymat/markit/view/partial" %}
 
 {% func NewSession() %}
-  {%= partial.Card(sessionForm()) %}
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      {%= partial.Card(sessionForm()) %}
+    </div>
+  </div>
 {% endfunc %}
 
 {% func sessionForm() %}
@@ -9,6 +13,8 @@
     <h3>Login</h3>
     {%= partial.TextInput("username", "username", "Username") %}
     {%= partial.PasswordInput("password", "password", "Password") %}
-    {%= partial.SubmitButton("Login") %}
+    <div class="row">
+      {%= partial.SubmitButton("Login") %}
+    </div>
   </form>
 {% endfunc %}

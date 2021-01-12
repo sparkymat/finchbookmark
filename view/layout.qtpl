@@ -12,8 +12,10 @@
       <link rel="stylesheet" type="text/css" href="/css/materialize.min.css" media="screen,projection">
     </head>
     <body>
-      <h1>markit!</h1>
-      {%s= content %}
+      <div class="container-fluid">
+        <h3>markit!</h1>
+        {%s= content %}
+      </div>
       <script type="text/javascript" src="/js/materialize.min.js"></script>
     </body>
   </html>

@@ -68,6 +68,7 @@ func Setup(router *echo.Echo, config Config) {
 		return c.String(http.StatusOK, "OK")
 	})
 
+	router.Static("js", "public/js")
 	router.Static("css", "public/css")
 	router.Static("fonts", "public/fonts")
 

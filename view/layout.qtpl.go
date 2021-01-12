@@ -38,41 +38,43 @@ func StreamLayout(qw422016 *qt422016.Writer, title string, content string) {
       <link rel="stylesheet" type="text/css" href="/css/materialize.min.css" media="screen,projection">
     </head>
     <body>
-      <h1>markit!</h1>
-      `)
-//line view/layout.qtpl:16
+      <div class="container-fluid">
+        <h3>markit!</h1>
+        `)
+//line view/layout.qtpl:17
 	qw422016.N().S(content)
-//line view/layout.qtpl:16
+//line view/layout.qtpl:17
 	qw422016.N().S(`
+      </div>
       <script type="text/javascript" src="/js/materialize.min.js"></script>
     </body>
   </html>
 `)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 }
 
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 func WriteLayout(qq422016 qtio422016.Writer, title string, content string) {
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	StreamLayout(qw422016, title, content)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	qt422016.ReleaseWriter(qw422016)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 }
 
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 func Layout(title string, content string) string {
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	qb422016 := qt422016.AcquireByteBuffer()
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	WriteLayout(qb422016, title, content)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	qs422016 := string(qb422016.B)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	qt422016.ReleaseByteBuffer(qb422016)
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 	return qs422016
-//line view/layout.qtpl:20
+//line view/layout.qtpl:22
 }

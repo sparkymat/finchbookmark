@@ -23,116 +23,110 @@ func StreamTextInput(qw422016 *qt422016.Writer, id string, name string, placehol
 	qw422016.N().S(`
   <div class="row">
     <div class="input-field col s12">
-      <input placeholder="`)
-//line view/partial/input.qtpl:4
-	qw422016.E().S(placeholder)
-//line view/partial/input.qtpl:4
-	qw422016.N().S(`" name="`)
-//line view/partial/input.qtpl:4
+      <i class="material-icons prefix">alternate_email</i>
+      <input name="`)
+//line view/partial/input.qtpl:5
 	qw422016.E().S(name)
-//line view/partial/input.qtpl:4
+//line view/partial/input.qtpl:5
 	qw422016.N().S(`" id="`)
-//line view/partial/input.qtpl:4
+//line view/partial/input.qtpl:5
 	qw422016.E().S(id)
-//line view/partial/input.qtpl:4
+//line view/partial/input.qtpl:5
 	qw422016.N().S(`" type="text" class="validate">
       <label for="`)
-//line view/partial/input.qtpl:5
+//line view/partial/input.qtpl:6
 	qw422016.E().S(id)
-//line view/partial/input.qtpl:5
+//line view/partial/input.qtpl:6
 	qw422016.N().S(`">`)
-//line view/partial/input.qtpl:5
+//line view/partial/input.qtpl:6
 	qw422016.E().S(placeholder)
-//line view/partial/input.qtpl:5
+//line view/partial/input.qtpl:6
 	qw422016.N().S(`</label>
     </div>
   </div>
 `)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 }
 
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 func WriteTextInput(qq422016 qtio422016.Writer, id string, name string, placeholder string) {
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	StreamTextInput(qw422016, id, name, placeholder)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	qt422016.ReleaseWriter(qw422016)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 }
 
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 func TextInput(id string, name string, placeholder string) string {
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	qb422016 := qt422016.AcquireByteBuffer()
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	WriteTextInput(qb422016, id, name, placeholder)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	qs422016 := string(qb422016.B)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	qt422016.ReleaseByteBuffer(qb422016)
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 	return qs422016
-//line view/partial/input.qtpl:8
+//line view/partial/input.qtpl:9
 }
 
-//line view/partial/input.qtpl:10
+//line view/partial/input.qtpl:11
 func StreamPasswordInput(qw422016 *qt422016.Writer, id string, name string, placeholder string) {
-//line view/partial/input.qtpl:10
+//line view/partial/input.qtpl:11
 	qw422016.N().S(`
   <div class="row">
     <div class="input-field col s12">
-      <input placeholder="`)
-//line view/partial/input.qtpl:13
-	qw422016.E().S(placeholder)
-//line view/partial/input.qtpl:13
-	qw422016.N().S(`" name="`)
-//line view/partial/input.qtpl:13
+      <i class="material-icons prefix">lock</i>    
+      <input name="`)
+//line view/partial/input.qtpl:15
 	qw422016.E().S(name)
-//line view/partial/input.qtpl:13
+//line view/partial/input.qtpl:15
 	qw422016.N().S(`" id="`)
-//line view/partial/input.qtpl:13
+//line view/partial/input.qtpl:15
 	qw422016.E().S(id)
-//line view/partial/input.qtpl:13
+//line view/partial/input.qtpl:15
 	qw422016.N().S(`" type="password" class="validate">
       <label for="`)
-//line view/partial/input.qtpl:14
+//line view/partial/input.qtpl:16
 	qw422016.E().S(id)
-//line view/partial/input.qtpl:14
+//line view/partial/input.qtpl:16
 	qw422016.N().S(`">`)
-//line view/partial/input.qtpl:14
+//line view/partial/input.qtpl:16
 	qw422016.E().S(placeholder)
-//line view/partial/input.qtpl:14
+//line view/partial/input.qtpl:16
 	qw422016.N().S(`</label>
     </div>
   </div>
 `)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 }
 
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 func WritePasswordInput(qq422016 qtio422016.Writer, id string, name string, placeholder string) {
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	StreamPasswordInput(qw422016, id, name, placeholder)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	qt422016.ReleaseWriter(qw422016)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 }
 
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 func PasswordInput(id string, name string, placeholder string) string {
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	qb422016 := qt422016.AcquireByteBuffer()
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	WritePasswordInput(qb422016, id, name, placeholder)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	qs422016 := string(qb422016.B)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	qt422016.ReleaseByteBuffer(qb422016)
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 	return qs422016
-//line view/partial/input.qtpl:17
+//line view/partial/input.qtpl:19
 }

@@ -21,7 +21,7 @@ var (
 func StreamSubmitButton(qw422016 *qt422016.Writer, label string) {
 //line view/partial/button.qtpl:1
 	qw422016.N().S(`
-  <button type="submit" class="waves-light btn">`)
+  <button type="submit" class="waves-light btn btn-large col s12">`)
 //line view/partial/button.qtpl:2
 	qw422016.E().S(label)
 //line view/partial/button.qtpl:2

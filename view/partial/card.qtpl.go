@@ -21,43 +21,41 @@ var (
 func StreamCard(qw422016 *qt422016.Writer, body string) {
 //line view/partial/card.qtpl:1
 	qw422016.N().S(`
-  <div class="col s12 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        `)
-//line view/partial/card.qtpl:5
+  <div class="card">
+    <div class="card-content">
+      `)
+//line view/partial/card.qtpl:4
 	qw422016.N().S(body)
-//line view/partial/card.qtpl:5
+//line view/partial/card.qtpl:4
 	qw422016.N().S(`
-      </div>
     </div>
   </div>
 `)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 }
 
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 func WriteCard(qq422016 qtio422016.Writer, body string) {
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	StreamCard(qw422016, body)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	qt422016.ReleaseWriter(qw422016)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 }
 
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 func Card(body string) string {
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	qb422016 := qt422016.AcquireByteBuffer()
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	WriteCard(qb422016, body)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	qs422016 := string(qb422016.B)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	qt422016.ReleaseByteBuffer(qb422016)
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 	return qs422016
-//line view/partial/card.qtpl:9
+//line view/partial/card.qtpl:7
 }
